@@ -5,6 +5,7 @@ Contains some predefined bodies of the Solar System:
 
 * Sun (☉)
 * Earth (♁)
+* Moon (☾)
 
 and a way to define new bodies (:py:class:`~Body` class).
 
@@ -63,3 +64,6 @@ Sun = Body.from_parameters(
 Earth = Body.from_parameters(
     Sun, k=398600 * u.km ** 3 / u.s ** 2,
     name="Earth", symbol=u"\u2641", R=R_earth.to(u.km))
+Moon = Body.from_parameters(
+    Earth, k=4900 * u.km ** 3 / u.s ** 2,
+    name="Moon", symbol=u"\u263D", R=1738.1 * u.km)
